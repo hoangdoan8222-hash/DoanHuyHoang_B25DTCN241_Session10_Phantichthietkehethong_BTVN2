@@ -1,0 +1,85 @@
+<mxfile host="Electron" agent="ChatGPT">
+  <diagram id="rikkeibank-sequence" name="RikkeiBank - Thanh toán">
+    <mxGraphModel dx="1935" dy="1310" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=0;" value="Khách hàng" vertex="1">
+          <mxGeometry height="620" width="150" x="80" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="10" parent="2" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="390" width="20" x="145" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=0;" value="Cổng Thanh Toán" vertex="1">
+          <mxGeometry height="620" width="150" x="330" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="3" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="260" width="20" x="395" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=0;" value="Ngân Hàng Lõi" vertex="1">
+          <mxGeometry height="620" width="150" x="600" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="12" parent="4" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="110" width="20" x="665" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;rounded=0;" value="EmailServer" vertex="1">
+          <mxGeometry height="620" width="150" x="870" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="13" parent="5" style="rounded=0;html=1;fillColor=#ffffff;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="60" width="20" x="935" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" parent="1" style="opacity=0;fillOpacity=0;strokeOpacity=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="155" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" parent="1" style="opacity=0;fillOpacity=0;strokeOpacity=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="405" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="1" style="opacity=0;fillOpacity=0;strokeOpacity=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="405" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="1" style="opacity=0;fillOpacity=0;strokeOpacity=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="675" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" parent="1" style="opacity=0;fillOpacity=0;strokeOpacity=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="405" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="p6" parent="1" style="opacity=0;fillOpacity=0;strokeOpacity=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="155" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="p7" parent="1" style="opacity=0;fillOpacity=0;strokeOpacity=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="405" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="p8" parent="1" style="opacity=0;fillOpacity=0;strokeOpacity=0;" value="" vertex="1">
+          <mxGeometry height="1" width="1" x="945" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="20" edge="1" parent="1" source="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="p2" value="nhập thẻ tín dụng">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="p2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="p3" value="checkCardFormat() [Self]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="22" edge="1" parent="1" source="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="p4" value="processPayment()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="23" edge="1" parent="1" source="p4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;" target="p5" value="kết quả giao dịch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" edge="1" parent="1" source="p5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;" target="p6" value="hiển thị thành công">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25" edge="1" parent="1" source="p7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;" target="p8" value="sendReceiptEmail()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="30" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;" value="LỖI 1 ĐÃ SỬA: Bước 2 = Self&lt;br/&gt;Không tạo Lifeline kiểm tra định dạng riêng." vertex="1">
+          <mxGeometry height="90" width="330" x="60" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="31" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;" value="LỖI 2 ĐÃ SỬA: Bước 6 = Async&lt;br/&gt;Không vẽ Return ngay sau Async vì không chờ EmailServer." vertex="1">
+          <mxGeometry height="90" width="400" x="430" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="32" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=14;" value="Sync = nét liền đầu đặc&lt;br/&gt;Return = nét đứt đầu hở&lt;br/&gt;Async = nét liền đầu hở&lt;br/&gt;Self = tự gọi trên cùng Lifeline" vertex="1">
+          <mxGeometry height="110" width="300" x="870" y="700" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
